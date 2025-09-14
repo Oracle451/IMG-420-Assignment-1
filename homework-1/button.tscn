@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://da52m68v1xdvc"]
+
+[ext_resource type="Script" uid="uid://cr8jsyp380uvt" path="res://button.gd" id="1_n4tde"]
+[ext_resource type="Texture2D" uid="uid://dx5j0tvbxt6hu" path="res://Player Sprite/ButtonOff.png" id="1_r04n3"]
+[ext_resource type="Texture2D" uid="uid://dj8v5mmwdn5hn" path="res://Player Sprite/ButtonOn.png" id="3_vxja4"]
+[ext_resource type="AudioStream" uid="uid://dpmbb852uwihn" path="res://Player Sprite/ButtonPress.mp3" id="4_lt4la"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lt4la"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r04n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vxja4")
+}],
+"loop": true,
+"name": &"Toggle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4tde"]
+size = Vector2(357, 512)
+
+[node name="Button" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_n4tde")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -3)
+sprite_frames = SubResource("SpriteFrames_lt4la")
+animation = &"Toggle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-88, -67)
+shape = SubResource("RectangleShape2D_n4tde")
+
+[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lt4la")

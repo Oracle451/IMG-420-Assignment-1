@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://2fit4vdd1hoh"]
+
+[ext_resource type="Texture2D" uid="uid://dij0qx4y8wcoi" path="res://Player Sprite/HealthPickup.png" id="1_01648"]
+[ext_resource type="Script" uid="uid://djhu4gjt7bnu" path="res://health_pickup.gd" id="1_awyve"]
+[ext_resource type="AudioStream" uid="uid://cpqmot2h7yds8" path="res://Player Sprite/HealthPickup.mp3" id="3_xl6eh"]
+[ext_resource type="AudioStream" uid="uid://sqvqut2xii48" path="res://Player Sprite/HealthPickupRespawn.mp3" id="4_jk1s8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_awyve"]
+radius = 146.0
+
+[node name="HealthPickup" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
+script = ExtResource("1_awyve")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_01648")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, -89)
+shape = SubResource("CircleShape2D_awyve")
+
+[node name="HealthPickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xl6eh")
+
+[node name="HealthRespawnSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_jk1s8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

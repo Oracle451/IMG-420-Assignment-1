@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sqvqut2xii48"
+path="res://.godot/imported/HealthPickupRespawn.mp3-66a898e36626232226d2aac26b78ea1b.mp3str"
+
+[deps]
+
+source_file="res://Player Sprite/HealthPickupRespawn.mp3"
+dest_files=["res://.godot/imported/HealthPickupRespawn.mp3-66a898e36626232226d2aac26b78ea1b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

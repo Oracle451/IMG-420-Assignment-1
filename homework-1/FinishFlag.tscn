@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbefymw0ybics"]
+
+[ext_resource type="Texture2D" uid="uid://coobquxb3pd7j" path="res://Player Sprite/FinishFlag.png" id="1_c8cll"]
+[ext_resource type="Script" uid="uid://bv7huhypbmfb0" path="res://finish_flag.gd" id="1_xylb4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xylb4"]
+size = Vector2(323, 562)
+
+[node name="Finish Flag" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_xylb4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-219.5, 65)
+shape = SubResource("RectangleShape2D_xylb4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c8cll")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
