@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0wigkfj3xxed"]
+[gd_scene format=3 uid="uid://c0wigkfj3xxed"]
 
-[ext_resource type="Script" uid="uid://b7ao8gd7mc10r" path="res://level.gd" id="1_0b4ue"]
-[ext_resource type="PackedScene" uid="uid://dg71nrtvkw2sg" path="res://player.tscn" id="1_oi3di"]
-[ext_resource type="PackedScene" uid="uid://bbefymw0ybics" path="res://FinishFlag.tscn" id="2_n6hdu"]
-[ext_resource type="PackedScene" uid="uid://c5onp0oqrmrte" path="res://block.tscn" id="2_vonw3"]
-[ext_resource type="PackedScene" uid="uid://2fit4vdd1hoh" path="res://health_pickup.tscn" id="4_0b4ue"]
-[ext_resource type="PackedScene" uid="uid://da52m68v1xdvc" path="res://button.tscn" id="5_f2txt"]
-[ext_resource type="PackedScene" uid="uid://ddkgxutdtu6nx" path="res://spike.tscn" id="6_1ainy"]
+[ext_resource type="Script" uid="uid://b7ao8gd7mc10r" path="res://Scripts/level.gd" id="1_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://dg71nrtvkw2sg" path="res://Scenes/player.tscn" id="1_oi3di"]
+[ext_resource type="PackedScene" uid="uid://bbefymw0ybics" path="res://Scenes/FinishFlag.tscn" id="2_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://c5onp0oqrmrte" path="res://Scenes/block.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://2fit4vdd1hoh" path="res://Scenes/health_pickup.tscn" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://da52m68v1xdvc" path="res://Scenes/button.tscn" id="5_f2txt"]
+[ext_resource type="PackedScene" uid="uid://ddkgxutdtu6nx" path="res://Scenes/spike.tscn" id="6_1ainy"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0b4ue")

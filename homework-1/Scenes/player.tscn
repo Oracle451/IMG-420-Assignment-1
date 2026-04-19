@@ -1,6 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://dg71nrtvkw2sg"]
+[gd_scene format=3 uid="uid://dg71nrtvkw2sg"]
 
-[ext_resource type="Script" uid="uid://cdh2antealhm1" path="res://player.gd" id="1_b26j0"]
+[ext_resource type="Script" uid="uid://cdh2antealhm1" path="res://Scripts/player.gd" id="1_b26j0"]
 [ext_resource type="Texture2D" uid="uid://dhgjllpc6p5yf" path="res://Player Sprite/Idle.png" id="1_dw050"]
 [ext_resource type="Texture2D" uid="uid://c256qons6sdov" path="res://Player Sprite/Jump1.png" id="2_b26j0"]
 [ext_resource type="Texture2D" uid="uid://dcmw7qwimylot" path="res://Player Sprite/Crouch.png" id="2_n7ghd"]
@@ -196,10 +196,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dw050"]
 size = Vector2(191, 627)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1047436771 groups=["player"]]
 script = ExtResource("1_b26j0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=453196956]
 position = Vector2(-1, 1.90735e-06)
 sprite_frames = SubResource("SpriteFrames_u1c27")
 animation = &"Throw"
@@ -207,13 +207,13 @@ frame = 3
 frame_progress = 1.0
 metadata/_edit_group_ = true
 
-[node name="CollisionBox" type="CollisionShape2D" parent="."]
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=1099061545]
 position = Vector2(-50.5, 28.5)
 shape = SubResource("RectangleShape2D_dw050")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1764956250]
 
-[node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="." unique_id=278643687]
 stream = ExtResource("29_iruf7")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_sprite_animation_finished"]
